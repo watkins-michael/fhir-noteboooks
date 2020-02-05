@@ -1,0 +1,18 @@
+{
+  "name": "hooks-server",
+  "version": "1.0.0",
+  "description": "CDS Hooks server to be used with the framingham-app-hooks repository in the FHIR Education package, adapted from https://github.com/cerner/cds-services-tutorial/wiki",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "nodemon ./index.js localhost 3000"
+  },
+  "author": "Stratametrics LLC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

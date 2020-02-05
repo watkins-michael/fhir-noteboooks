@@ -1,0 +1,19 @@
+{
+  "name": "framingham-app-SMART",
+  "version": "1.0.0",
+  "description": "This is a SMART-enabled template for the Framingham Risk Calculator in the FHIR Education package. Risk equations come from https://www.mdcalc.com/framingham-risk-score-hard-coronary-heart-disease#evidence. Docker/Node server file architecture adapted from https://github.com/cerner/cds-services-tutorial/wiki",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "nodemon ./index.js localhost 5000"
+  },
+  "author": "Stratametrics LLC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
