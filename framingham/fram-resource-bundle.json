@@ -1,0 +1,623 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "total": 20,
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id":"FRAM-1",
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "1Fram-Normal",
+                        "given": [
+                            "Dmitri"
+                        ],
+                        "prefix": [
+                            "Mr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1982-06-19"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id":"FRAM-2",
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "2Fram-High",
+                        "given": [
+                            "Christie"
+                        ],
+                        "prefix": [
+                            "Mrs."
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1947-01-02"
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "FRAM-3",
+                "name": [
+                    {
+                        "use": "official",
+                        "family": "3Fram-Borderline",
+                        "given": [
+                            "Scott"
+                        ],
+                        "prefix": [
+                            "Mr."
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1970-02-23"
+
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "72166-2",
+                        "display": "Tobacco smoking status NHIS"
+                        }],
+                        "text": "Tobacco smoking status NHIS"
+                    },
+                    "subject": {
+                        "reference": "Patient/FRAM-1"
+                    },
+                    "effectiveDateTime": "2010-11-25T10:00:15-07:00",
+                    "issued": "2010-11-25T10:00:15.974-07:00",
+                    "valueCodeableConcept": {
+                        "coding": [{
+                            "system": "http://loinc.org",
+                            "code": "LA18978-9",
+                            "display": "Never smoker"
+                            }],
+                            "text": "Never smoker"
+                        }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "72166-2",
+                        "display": "Tobacco smoking status NHIS"
+                    }],
+                    "text": "Tobacco smoking status NHIS"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "effectiveDateTime": "2010-11-25T10:00:15-07:00",
+                "issued": "2010-11-25T10:00:15.974-07:00",
+                "valueCodeableConcept": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "LA18977-1",
+                        "display": "Current some day smoker"
+                    }],
+                    "text": "Current some day smoker"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "72166-2",
+                        "display": "Tobacco smoking status NHIS"
+                    }],
+                    "text": "Tobacco smoking status NHIS"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-3"
+                },
+                "effectiveDateTime": "2010-11-25T10:00:15-07:00",
+                "issued": "2010-11-25T10:00:15.974-07:00",
+                "valueCodeableConcept": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "LA15920-4",
+                        "display": "Former smoker"
+                    }],
+                    "text": "Former smoker"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "55284-4",
+                        "display": "Blood Pressure"
+                    }],
+                    "text": "Blood Pressure"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-1"
+                },
+                "effectiveDateTime": "2015-04-02T11:00:15-06:00",
+                "issued": "2015-04-02T11:00:15.974-06:00",
+                "component": [
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8462-4",
+                                "display": "Diastolic Blood Pressure"
+                            }],
+                            "text": "Diastolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 85,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8480-6",
+                                "display": "Systolic Blood Pressure"
+                            }],
+                            "text": "Systolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 105,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    }
+                ]
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "55284-4",
+                        "display": "Blood Pressure"
+                    }],
+                    "text": "Blood Pressure"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "effectiveDateTime": "2015-04-02T11:00:15-06:00",
+                "issued": "2015-04-02T11:00:15.974-06:00",
+                "component": [
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8462-4",
+                                "display": "Diastolic Blood Pressure"
+                            }],
+                            "text": "Diastolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 111,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8480-6",
+                                "display": "Systolic Blood Pressure"
+                            }],
+                            "text": "Systolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 155,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    }
+                ]
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "55284-4",
+                        "display": "Blood Pressure"
+                    }],
+                    "text": "Blood Pressure"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-3"
+                },
+                "effectiveDateTime": "2015-04-02T11:00:15-06:00",
+                "issued": "2015-04-02T11:00:15.974-06:00",
+                "component": [
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8462-4",
+                                "display": "Diastolic Blood Pressure"
+                            }],
+                            "text": "Diastolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 105,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [{
+                                "system": "http://loinc.org",
+                                "code": "8480-6",
+                                "display": "Systolic Blood Pressure"
+                            }],
+                            "text": "Systolic Blood Pressure"
+                        },
+                        "valueQuantity": {
+                            "value": 120,
+                            "unit": "mm[Hg]",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "mm[Hg]"
+                        }
+                    }
+                ]
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2093-3",
+                        "display": "Total Cholesterol"
+                    }],
+                    "text": "Total Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-1"
+                },
+                "effectiveDateTime": "2016-03-31T11:00:15-06:00",
+                "issued": "2016-03-31T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 180,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2093-3",
+                        "display": "Total Cholesterol"
+                    }],
+                    "text": "Total Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "effectiveDateTime": "2016-03-31T11:00:15-06:00",
+                "issued": "2016-03-31T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 250,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2093-3",
+                        "display": "Total Cholesterol"
+                    }],
+                    "text": "Total Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-3"
+                },
+                "effectiveDateTime": "2016-03-31T11:00:15-06:00",
+                "issued": "2016-03-31T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 200,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2085-9",
+                        "display": "High Density Lipoprotein Cholesterol"
+                    }], "text": "High Density Lipoprotein Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-1"
+                },
+                "effectiveDateTime": "2018-09-13T11:00:15-06:00",
+                "issued": "2018-09-13T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 75,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2085-9",
+                        "display": "High Density Lipoprotein Cholesterol"
+                    }], "text": "High Density Lipoprotein Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "effectiveDateTime": "2018-09-13T11:00:15-06:00",
+                "issued": "2018-09-13T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 40,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "Observation",
+                "code": {
+                    "coding": [{
+                        "system": "http://loinc.org",
+                        "code": "2085-9",
+                        "display": "High Density Lipoprotein Cholesterol"
+                    }], "text": "High Density Lipoprotein Cholesterol"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-3"
+                },
+                "effectiveDateTime": "2018-09-13T11:00:15-06:00",
+                "issued": "2018-09-13T11:00:15.974-06:00",
+                "valueQuantity": {
+                    "value": 59,
+                    "unit": "mg/dL",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg/dL"
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"Observation"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "ValueSet",
+                "title": "blood-pressure-medications",
+                "expansion": {
+                    "timestamp": "2019-06-20T17:00:49.192Z",
+                    "total": 5,
+                    "contains": [
+                        {
+                            "code": "259255",
+                            "display": "Atorvastatin 80 MG Oral Tablet"
+                        },
+                        {
+                            "code": "833036",
+                            "display": "Captopril 25 MG Oral Tablet"
+                        },
+                        {
+                            "code": "197361",
+                            "display": "Amlodipine 5 MG Oral Tablet"
+                        },
+                        {
+                            "code": "309362",
+                            "display": "Clopidogrel 75 MG Oral Tablet"
+                        },
+                        {
+                            "code": "312961",
+                            "display": "Simvastatin 20 MG Oral Tablet"
+                        }
+                    ]
+                }
+            },
+            "request":{
+                "method":"POST",
+                "url":"ValueSet"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "MedicationRequest",
+                "medicationCodeableConcept": {
+                    "coding": [{
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "197361",
+                        "display": "Amlodipine 5 MG Oral Tablet"
+                    }],
+                    "text": "Amlodipine 5 MG Oral Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "authoredOn": "2008-01-21T10:00:15-07:00"
+            },
+            "request":{
+                "method":"POST",
+                "url":"MedicationRequest"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "MedicationRequest",
+                "medicationCodeableConcept": {
+                    "coding": [{
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "259255",
+                        "display": "Atorvastatin 80 MG Oral Tablet"
+                    }],
+                    "text": "Atorvastatin 80 MG Oral Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "authoredOn": "2008-01-21T10:00:15-07:00"
+            },
+            "request":{
+                "method":"POST",
+                "url":"MedicationRequest"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "MedicationRequest",
+                "medicationCodeableConcept": {
+                    "coding": [{
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "309362",
+                        "display": "Clopidogrel 75 MG Oral Tablet"
+                    }],
+                    "text": "Clopidogrel 75 MG Oral Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "authoredOn": "2008-01-21T10:00:15-07:00"
+            },
+            "request":{
+                "method":"POST",
+                "url":"MedicationRequest"
+            }
+        },
+        {
+            "resource":{
+                "resourceType": "MedicationRequest",
+                "medicationCodeableConcept": {
+                    "coding": [{
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "833036",
+                        "display": "Captopril 25 MG Oral Tablet"
+                    }],
+                    "text": "Captopril 25 MG Oral Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/FRAM-2"
+                },
+                "authoredOn": "2008-01-21T10:00:15-07:00"
+            },
+            "request":{
+                "method":"POST",
+                "url":"MedicationRequest"
+            }
+        }
+    ]
+}
